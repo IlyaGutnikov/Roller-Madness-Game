@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour {
 			case gameStates.Death:
 				backgroundMusic.volume -= 0.01f;
 				if (backgroundMusic.volume<=0.0f) {
-					AudioSource.PlayClipAtPoint (gameOverSFX,gameObject.transform.position);
+				AudioSource.PlayClipAtPoint (gameOverSFX,Camera.main.transform.position);
 
 					gameState = gameStates.GameOver;
 				}
